@@ -1,0 +1,635 @@
+:root{
+    --font-regular-color:#ffff;
+    --font-title-color:#060610;
+    --font-grad1-color:#00ff88;
+    --bg-color:#060610;
+    --bg-wrapper_block-color:#343259;
+    --bg-grad1-color:#0e0e18;
+    --bg-grad2-color:#060610;
+    --border-color:#ffffff1a;
+
+    /* #060610 */
+    /* --bg-test-color:; */
+/*
+#242424
+#272626
+#232733
+
+!!!
+#343259
+#271f2b
+
+bg-gradient:
+#0e0e18
+#060610
+font-gradient:
+#00ff88
+#8B5CF6
+#FF0080
+*/
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Ubuntu, sans-serif;
+    color:var(--font-regular-color);
+    background-color: var(--bg-color);
+}
+.body-wrapper{
+    overflow: hidden;
+    width:100%;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: var(--font-regular-color)
+}
+p{
+    margin-bottom: 20px;
+}
+h2{
+    font-weight: 100;
+}
+
+/* .particle1{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff,0 0 30px #f0f,0 0 40px #f0f, 0 0 50px #5800e6,0 0 60px #5800e6, 0 0 70px #5800e6, 0 0 80px #7700e6, 0 0 90px #9200e6, 0 0 100px #9200e6, 0 0 110px #9200e6, 0 0 120px #9200e6, 0 0 130px #4500e6, 0 0 140px #3200e6, 0 0 150px #2a00e6;
+    position: absolute;
+    top: 500px;
+    left: 200px;
+    filter: blur(5px);
+} */
+
+
+.header-comtainer{
+    border-bottom-width: 1px;
+    border-bottom-color: var(--border-color);
+    border-bottom-style: solid;
+}
+.navbar{
+    padding: 15px 30px;
+    height: auto;
+    background-color: var(--font-title-color);
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.25em;
+}
+.nav-options>a{
+    transition: transform 0.2s linear, border-color 0.1s linear;
+    border-bottom: 2px transparent solid;
+}
+.nav-options>a:hover{
+    transform: scale(1.2);
+    border-color: var(--border-color);
+}
+.nav-title{
+    display: flex;
+    align-items: center;
+    font-size: 2.5em;
+}
+
+.smile{
+    font-size: 60px;
+    padding-bottom: 10px;
+    /* !!!! padding поднял смайтик, тк он не ровный */
+}
+
+.nav-options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+
+}
+
+.main{
+    padding: 50px;
+    line-height: 1.75;
+
+}
+
+.anchor{
+    position: fixed;
+    top: 90%;
+    right: 2%;
+    background-color: var(--bg-grad1-color);
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/4315/4315713.png);
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*--------------------------ГЛАВНАЯ  */
+.main-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-description{
+    max-width: 1600px;
+    
+}
+
+@keyframes main-description-title-preload{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-animation{
+    animation: main-description-title-preload 2s linear;
+}
+
+
+
+.main-decription-wrapper{
+    transition: transform 0.2s linear;
+}
+
+.main-decription-wrapper:hover{
+    transform: scale(1.01);
+    
+}
+
+.main-description-wrapper-text{
+    font-size: 32px;
+}
+
+.main-description-title{
+    font-size: 48px;
+    text-align: center;
+    padding: 0 0 20px 0 ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* .main-decription-title-styled{
+    background: linear-gradient(100deg, white 20% , var(--font-grad1-color));
+    background-clip: text;
+    color: transparent;
+} */
+
+.main-decription-wrapper{
+    padding: 25px;
+    background: linear-gradient(var(--bg-grad1-color), var(--bg-grad2-color));
+    border: 1px var(--border-color) solid;
+    border-radius: 20px;
+    
+}
+/* ----------------------------------------------- */
+
+/* ------------------------------------ТЕОРИЯ */
+.main-theory{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+
+.main-theory-themes{
+    display:flex;
+    max-width: 2500px;
+    flex-direction: row;
+
+}
+
+
+.main-theory-themes-list{
+    display: block;
+    border: 1px var(--border-color) solid;
+    min-width: 0px;
+    
+}
+.main-theory-themes-list > ul > li{
+    border-bottom: 1px var(--border-color) solid;  
+    list-style: none;
+    padding: 10px 0;
+    cursor: pointer;
+    
+
+}
+
+.main-theory-themes-font{
+    font-size: 32px;
+    font-weight: 100;
+}
+.main-theory-themes-theme{
+    display: block;
+    padding: 0 20px;
+}
+.main-theory-themes-theme ul{
+    padding: 0 20px;
+}
+.main-theory-themes-theme ol{
+    padding: 0 20px;
+}
+.main-theory-themes-theme h1{
+    font-size: 36px;
+    font-weight: 500;
+}
+
+
+.main-theory-themes-theme-title{
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+.podtheme{
+    margin-left: 20px;
+}
+/* ---------------------------------------------------- */
+/* ПРАКТИКА */
+.main-practice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.main-practice-wrapper{
+    width: 100%;
+    max-width: 2500px;
+    min-width: 0px;
+    background: linear-gradient(var(--bg-grad1-color), var(--bg-grad2-color));
+    font-weight: 700;
+    font-size: 2em;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.main-practice-wrapper-card{
+    padding: 40px;
+    font-size: 0.8em;
+    display: grid;
+    grid-template-columns: 10% 80%;
+}
+
+.main-practice-wrapper-card-title{
+    padding: 10px;
+    max-width: 100px;
+}
+.main-practice-wrapper-card-title-num{
+    border: 1px solid #ffff;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    width: auto;
+}
+
+.main-practice-wrapper-card-task{
+    padding-top: 10px;
+}
+
+.main-practice-wrapper-card-answer{
+    font-size: 0.7em;
+    
+}
+.main-practice-wrapper-card-answer:hover{
+    text-decoration: underline;
+}
+
+.main-practice-wrapper-card-task-img{
+    height: auto;
+}
+.main-practice-wrapper-card-task-img img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.main-practice-wrapper-card-answer-dropdown{
+    display: none;
+    font-size: 0.7em;
+}
+
+.show{
+    display: block;
+}
+
+/* ------------------------------------------------------- */
+.footer{
+    background-color: (--font-title-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px 100px;
+    border-top: 1px var(--border-color) solid;
+    
+}
+.footer-info{
+    display: block;
+    text-align: center;
+    flex: 1;
+}
+.footer-socials{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.footer-socials>ul{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-burger{
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-color);
+    transition: background-color 1s;
+    position: relative;
+    border: none;
+    border-radius: 20%;
+}
+.menu-burger span{
+    width: 30px;
+    height: 3px;
+    background-color: var(--font-regular-color);
+    position: absolute;
+    left: 5px;
+}
+
+
+.menu-burger span:nth-child(1){
+    transform: translateY(-10px);
+}
+.menu-burger span:nth-child(2){
+    
+}
+.menu-burger span:nth-child(3){
+    transform: translateY(10px);
+}
+
+/* cross */
+.header-container.open .menu-burger{
+    background-color: var(--bg-wrapper_block-color);
+    transition: background-color .3s;
+}
+.header-container.open .menu-burger span:nth-child(1){
+    transform: translateY(0) rotate(45deg);
+}
+.header-container.open .menu-burger span:nth-child(2){
+    opacity: 0;
+}
+.header-container.open .menu-burger span:nth-child(3){
+    transform: translateY(0) rotate(-45deg);
+}
+
+.header-container.open .nav-options{
+    transform: translateX(-100%);
+    visibility: visible;
+}
+
+@media (max-width:1500px){
+    main{
+        padding: none;
+    }
+
+    .main-description{ 
+        max-width: 1200px;
+    }
+    
+    .main-theory-themes{
+        max-width: 1500px;
+    }
+    .main-practice-wrapper{
+        max-width: 1500px;
+    }
+
+    .nav-options{
+        position: absolute;
+        right: -350px;
+        top: 0;
+        width: 350px;
+        box-sizing: border-box;
+
+        background-color: var(--bg-wrapper_block-color);
+        padding: 120px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        z-index: 2;
+
+        transition: transform .5s, visibilit .5s;
+    }
+    .nav-options a{
+        display: block;
+        padding: 20px 0;
+    }
+    .menu-burger{
+        display: block;
+        z-index: 3;
+
+    }
+
+    /*название */
+    .nav-title{
+        font-size: 1.5em;
+    }
+    /* смайлик */
+    .smile{
+        font-size: 40px;
+    }
+    /* текст стр.main */
+    .main-description-wrapper-text{
+        font-size: 24px;
+    }
+    /* заголовок main */
+    .main-description-title{
+        font-size: 32px;
+    }
+    /* текст стр.theory */
+    .main-theory-themes-font{
+        font-size: 24px;
+    }
+    /* заголовок текста theory */
+    .main-theory-themes-theme h1{
+        font-size: 28px;
+    }
+    /* йцзаголовок страницы theory */
+    .main-theory-themes-theme-title{
+        font-size: 36px;
+    }
+    /* заголовок стр. practice */
+    .main-practice-wrapper{
+        font-size: 24px;
+    }
+    .main-practice-wrapper-card{
+        font-size: 24px;
+    }
+    .main-practice-wrapper-card-answer{
+        font-size: 15px;
+    }
+    .main-practice-wrapper-card-answer-dropdown{
+        font-size: 15px;
+    }
+    .main-practice-wrapper-card-answer-dropdown{
+        font-size: 15px;
+    }
+
+}
+
+
+
+@media (max-width:650px){
+    .main{
+        padding: 0;
+    }
+
+    .main-description{ 
+        max-width: 650px;
+    }
+    
+    .main-theory{
+        gap:0;
+    }
+    .flex-obj1{
+        display: block;
+        justify-content: center;
+        
+    }
+    .flex-obj2{
+        display: block;
+    }
+    .main-theory-themes{
+        max-width: 650px;
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+        display: block;
+    }
+    .main-practice-wrapper{
+        max-width: 650px;
+    }
+
+    .nav-options{
+        position: absolute;
+        right: -350px;
+        top: 0;
+        width: 350px;
+        box-sizing: border-box;
+
+        background-color: var(--bg-wrapper_block-color);
+        padding: 120px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        z-index: 2;
+
+        transition: transform .5s, visibilit .5s;
+    }
+    .nav-options a{
+        display: block;
+        padding: 20px 0;
+    }
+    .menu-burger{
+        display: block;
+        z-index: 3;
+
+    }
+
+    /*название */
+    .nav-title{
+        font-size: 1.5em;
+    }
+    /* смайлик */
+    .smile{
+        font-size: 35px;
+    }
+    /* текст стр.main */
+    .main-description-wrapper-text{
+        font-size: 19px;
+    }
+    /* заголовок main */
+    .main-description-title{
+        font-size: 27px;
+    }
+    /* текст стр.theory */
+    .main-theory-themes-font{
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    .main-theory-themes-list ul li{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-theory-themes-theme{
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+    /* заголовок текста theory */
+    .main-theory-themes-theme h1{
+        font-size: 15px;
+    }
+    /* йцзаголовок страницы theory */
+    .main-theory-themes-theme-title{
+        font-size: 20px;
+    }
+    /* заголовок стр. practice */
+    .main-practice-wrapper{
+        font-size: 15px;
+    }
+    .main-practice-wrapper-card{
+        font-size: 20px;
+        padding: 20px 0;
+    }
+    .main-practice-wrapper-card-title{
+        padding: 0 5px;
+    }
+    .main-practice-wrapper-card-answer{
+        font-size: 12px;
+    }
+    .main-practice-wrapper-card-answer-dropdown{
+        font-size: 12px;
+    }
+    .main-practice-wrapper-card-answer-dropdown{
+        font-size: 12px;
+    }
+
+    .anchor{
+        width: 40px;
+        height: 40px;
+        top:92%;
+    }
+    .footer{
+        padding: 20px 0;
+        font-size: 12px;
+    }
+}
